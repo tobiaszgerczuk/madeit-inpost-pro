@@ -38,7 +38,7 @@ jobs:
           VERSION="${GITHUB_REF_NAME#v}"
           awk -v v="$VERSION" '$0 == "## " v {found=1; print; next} /^## / {found=0} found' CHANGELOG.md > dist/changelog.md
           test -s dist/changelog.md || { echo "CHANGELOG.md has no section for $VERSION" >&2; exit 1; }
-      - name: Publish the release to the WCO Labs shop
+      - name: Publish the release to the MadeIT Labs shop
         if: startsWith(github.ref, 'refs/tags/v') && env.WCO_LABS_TOKEN != ''
         env:
           STAGED: ${{ vars.WCO_LABS_STAGED == 'true' && '1' || '0' }}

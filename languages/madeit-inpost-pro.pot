@@ -1,4 +1,4 @@
-# Copyright (C) 2026 WCO Labs
+# Copyright (C) 2026 MadeIT Labs
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
@@ -31,7 +31,7 @@ msgstr ""
 
 #. Author of the plugin
 #: madeit-inpost-pro.php
-msgid "WCO Labs"
+msgid "MadeIT Labs"
 msgstr ""
 
 #. Author URI of the plugin
@@ -340,7 +340,7 @@ msgstr ""
 #. translators: %s: error message
 #: src/Updater.php:44
 #, php-format
-msgid "Could not connect to WCO Labs (%s)."
+msgid "Could not connect to MadeIT Labs (%s)."
 msgstr ""
 
 #: src/Updater.php:66
@@ -362,11 +362,11 @@ msgstr ""
 #. translators: %d: HTTP status code
 #: src/Updater.php:71
 #, php-format
-msgid "The WCO Labs server returned error %d."
+msgid "The MadeIT Labs server returned error %d."
 msgstr ""
 
 #: src/Updater.php:127
-msgid "The update could not be downloaded. Check your license and the connection to WCO Labs."
+msgid "The update could not be downloaded. Check your license and the connection to MadeIT Labs."
 msgstr ""
 
 #: src/Updater.php:157
@@ -394,7 +394,7 @@ msgid "Key saved"
 msgstr ""
 
 #: src/Updater.php:178
-msgid "The connection to WCO Labs is not configured yet."
+msgid "The connection to MadeIT Labs is not configured yet."
 msgstr ""
 
 #: src/Updater.php:178
@@ -406,7 +406,7 @@ msgid "Could not check the license"
 msgstr ""
 
 #: src/Updater.php:179
-msgid "Could not connect to WCO Labs."
+msgid "Could not connect to MadeIT Labs."
 msgstr ""
 
 #. translators: 1: date, 2: sites in use, 3: site limit
@@ -458,7 +458,7 @@ msgstr ""
 
 #. translators: %s: link to the customer account
 #: src/Updater.php:183
-msgid "This license has been blocked. Contact WCO Labs support."
+msgid "This license has been blocked. Contact MadeIT Labs support."
 msgstr ""
 
 #: src/Updater.php:185
@@ -512,11 +512,11 @@ msgid "The license was activated for this shop."
 msgstr ""
 
 #: src/Updater.php:207
-msgid "The license could not be activated. Check the key and the connection to WCO Labs."
+msgid "The license could not be activated. Check the key and the connection to MadeIT Labs."
 msgstr ""
 
 #: src/Updater.php:208
-msgid "The key was saved. Activation will be available once the public WCO Labs address is connected."
+msgid "The key was saved. Activation will be available once the public MadeIT Labs address is connected."
 msgstr ""
 
 #: src/Updater.php:209
@@ -540,7 +540,7 @@ msgid "LICENSE KEY"
 msgstr ""
 
 #: src/Updater.php:230
-msgid "Connect this shop to WCO Labs"
+msgid "Connect this shop to MadeIT Labs"
 msgstr ""
 
 #: src/Updater.php:231

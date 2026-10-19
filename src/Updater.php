@@ -41,7 +41,7 @@ final class Updater
             'body' => ['license_key' => $key, 'site_url' => home_url('/')],
         ]);
         if (is_wp_error($response)) {
-            $this->lastError = sprintf(/* translators: %s: error message */ __('Could not connect to WCO Labs (%s).', 'madeit-inpost-pro'), $response->get_error_message());
+            $this->lastError = sprintf(/* translators: %s: error message */ __('Could not connect to MadeIT Labs (%s).', 'madeit-inpost-pro'), $response->get_error_message());
 
             return null;
         }
@@ -68,7 +68,7 @@ final class Updater
             $code === 403 && $message !== '' => $message,
             $code === 403 => __('This license is not allowed to do that.', 'madeit-inpost-pro'),
             $code === 422 => __('The server rejected the data (site address or key).', 'madeit-inpost-pro'),
-            default => sprintf(/* translators: %d: HTTP status code */ __('The WCO Labs server returned error %d.', 'madeit-inpost-pro'), $code),
+            default => sprintf(/* translators: %d: HTTP status code */ __('The MadeIT Labs server returned error %d.', 'madeit-inpost-pro'), $code),
         };
     }
 
@@ -109,7 +109,7 @@ final class Updater
             'name' => 'MadeIT InPost Pro',
             'slug' => 'madeit-inpost-pro',
             'version' => $data['version'],
-            'author' => 'WCO Labs',
+            'author' => 'MadeIT Labs',
             'requires' => $data['requires_wp'] ?? '',
             'requires_php' => $data['requires_php'] ?? '',
             'download_link' => $data['download_url'] ?? '',
@@ -124,14 +124,14 @@ final class Updater
         }
         $data = $this->request('updates/check');
         if (empty($data['download_url'])) {
-            return new \WP_Error('madeit_inpost_pro_update', __('The update could not be downloaded. Check your license and the connection to WCO Labs.', 'madeit-inpost-pro'));
+            return new \WP_Error('madeit_inpost_pro_update', __('The update could not be downloaded. Check your license and the connection to MadeIT Labs.', 'madeit-inpost-pro'));
         }
 
         return download_url($data['download_url']);
     }
 
     /**
-     * Current license state as reported by WCO Labs. Cached for a few minutes unless $refresh is true.
+     * Current license state as reported by MadeIT Labs. Cached for a few minutes unless $refresh is true.
      *
      * @return array{state: string, message?: string, expires_at?: string, sites_used?: int, site_limit?: int, site_active?: bool}
      */
@@ -175,12 +175,12 @@ final class Updater
 
         return match ($status['state'] ?? '') {
             'none' => ['tone' => 'idle', 'icon' => '—', 'title' => __('No key', 'madeit-inpost-pro'), 'text' => __('Paste your license key to activate this shop and receive updates.', 'madeit-inpost-pro'), 'updates' => __('Unavailable without a license', 'madeit-inpost-pro')],
-            'unavailable' => ['tone' => 'idle', 'icon' => '—', 'title' => __('Key saved', 'madeit-inpost-pro'), 'text' => __('The connection to WCO Labs is not configured yet.', 'madeit-inpost-pro'), 'updates' => __('Waiting for configuration', 'madeit-inpost-pro')],
-            'unreachable' => ['tone' => 'warn', 'icon' => '!', 'title' => __('Could not check the license', 'madeit-inpost-pro'), 'text' => (string) ($status['message'] ?? __('Could not connect to WCO Labs.', 'madeit-inpost-pro')), 'updates' => __('Could not be determined', 'madeit-inpost-pro')],
+            'unavailable' => ['tone' => 'idle', 'icon' => '—', 'title' => __('Key saved', 'madeit-inpost-pro'), 'text' => __('The connection to MadeIT Labs is not configured yet.', 'madeit-inpost-pro'), 'updates' => __('Waiting for configuration', 'madeit-inpost-pro')],
+            'unreachable' => ['tone' => 'warn', 'icon' => '!', 'title' => __('Could not check the license', 'madeit-inpost-pro'), 'text' => (string) ($status['message'] ?? __('Could not connect to MadeIT Labs.', 'madeit-inpost-pro')), 'updates' => __('Could not be determined', 'madeit-inpost-pro')],
             'unknown' => ['tone' => 'error', 'icon' => '×', 'title' => __('Unknown key', 'madeit-inpost-pro'), 'text' => __('The server does not know this license key. Check that you pasted all of it.', 'madeit-inpost-pro'), 'updates' => __('Unavailable', 'madeit-inpost-pro')],
             /* translators: %s: date */
             'expired' => ['tone' => 'warn', 'icon' => '!', 'title' => sprintf(__('License expired on %s', 'madeit-inpost-pro'), $date), 'text' => sprintf(/* translators: %s: link to the customer account */ __('The add-on keeps working, but new versions are no longer available. %s.', 'madeit-inpost-pro'), '<a href="'.$renew.'" target="_blank" rel="noopener">'.esc_html__('Renew your license in the customer account', 'madeit-inpost-pro').'</a>'), 'updates' => __('Paused until renewal', 'madeit-inpost-pro')],
-            'revoked' => ['tone' => 'error', 'icon' => '×', 'title' => __('License blocked', 'madeit-inpost-pro'), 'text' => __('This license has been blocked. Contact WCO Labs support.', 'madeit-inpost-pro'), 'updates' => __('Unavailable', 'madeit-inpost-pro')],
+            'revoked' => ['tone' => 'error', 'icon' => '×', 'title' => __('License blocked', 'madeit-inpost-pro'), 'text' => __('This license has been blocked. Contact MadeIT Labs support.', 'madeit-inpost-pro'), 'updates' => __('Unavailable', 'madeit-inpost-pro')],
             'active' => ! empty($status['site_active'])
                 ? ['tone' => 'ok', 'icon' => '✓', 'title' => __('License active', 'madeit-inpost-pro'), 'text' => sprintf(/* translators: 1: date, 2: sites in use, 3: site limit */ __('Valid until %1$s. Active sites: %2$d of %3$d.', 'madeit-inpost-pro'), $date, $sites['used'], $sites['limit']), 'updates' => sprintf(/* translators: %s: date */ __('Available until %s', 'madeit-inpost-pro'), $date)]
                 : ['tone' => 'warn', 'icon' => '!', 'title' => __('Shop not activated', 'madeit-inpost-pro'), 'text' => sprintf(/* translators: 1: date, 2: sites in use, 3: site limit */ __('The license is valid until %1$s, but this shop is not assigned to it (sites: %2$d of %3$d). Click “Save and activate”.', 'madeit-inpost-pro'), $date, $sites['used'], $sites['limit']), 'updates' => __('Available after activation', 'madeit-inpost-pro')],
@@ -204,8 +204,8 @@ final class Updater
         $notice = isset($_GET['madeit_notice']) ? sanitize_key(wp_unslash($_GET['madeit_notice'])) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
         $messages = [
             'active' => __('The license was activated for this shop.', 'madeit-inpost-pro'),
-            'failed' => __('The license could not be activated. Check the key and the connection to WCO Labs.', 'madeit-inpost-pro'),
-            'unavailable' => __('The key was saved. Activation will be available once the public WCO Labs address is connected.', 'madeit-inpost-pro'),
+            'failed' => __('The license could not be activated. Check the key and the connection to MadeIT Labs.', 'madeit-inpost-pro'),
+            'unavailable' => __('The key was saved. Activation will be available once the public MadeIT Labs address is connected.', 'madeit-inpost-pro'),
             'cleared' => __('The license key was removed.', 'madeit-inpost-pro'),
         ];
         $detail = $notice === 'failed' ? (string) get_transient('madeit_inpost_pro_license_error') : '';
@@ -227,7 +227,7 @@ final class Updater
             <div class="madeit-license-layout">
                 <section class="madeit-card madeit-license-card">
                     <span class="madeit-eyebrow"><?php esc_html_e('LICENSE KEY', 'madeit-inpost-pro'); ?></span>
-                    <h2><?php esc_html_e('Connect this shop to WCO Labs', 'madeit-inpost-pro'); ?></h2>
+                    <h2><?php esc_html_e('Connect this shop to MadeIT Labs', 'madeit-inpost-pro'); ?></h2>
                     <p><?php esc_html_e('You will find the key in your customer account after purchase. One license covers one shop.', 'madeit-inpost-pro'); ?></p>
                     <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
                         <input type="hidden" name="action" value="madeit_inpost_pro_license">
@@ -255,7 +255,7 @@ final class Updater
         check_admin_referer('madeit_inpost_pro_license', 'madeit_inpost_pro_license_nonce');
         $key = isset($_POST['madeit_inpost_pro_license_key']) ? sanitize_text_field(wp_unslash($_POST['madeit_inpost_pro_license_key'])) : '';
         if ($key === '' && ! str_ends_with($this->apiUrl, '.invalid')) {
-            // Free the license slot on WCO Labs before the key is forgotten.
+            // Free the license slot on MadeIT Labs before the key is forgotten.
             $this->request('licenses/deactivate');
         }
         $key = preg_replace('/\s+/', '', $key) ?? $key;
