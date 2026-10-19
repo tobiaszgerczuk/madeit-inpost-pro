@@ -3,7 +3,7 @@
  * Plugin Name: MadeIT InPost Pro
  * Plugin URI: https://labs.made-it.pl/en/plugins/madeit-inpost-pro
  * Description: Adds InPost ShipX shipments, PDF labels and cash on delivery to MadeIT InPost, plus editable texts and an accent colour.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 6.6
  * Requires PHP: 8.0
  * Requires Plugins: woocommerce, madeit-inpost
@@ -22,7 +22,7 @@ use Madeit\InpostPro\Updater;
 
 defined('ABSPATH') || exit;
 
-define('MADEIT_INPOST_PRO_VERSION', '1.0.0');
+define('MADEIT_INPOST_PRO_VERSION', '1.0.1');
 // Oldest free plugin version this add-on works with. Raise it when the add-on needs a newer hook from the free plugin.
 define('MADEIT_INPOST_PRO_MIN_FREE_VERSION', '1.0.0');
 
