@@ -1,0 +1,584 @@
+# Copyright (C) 2026 WCO Labs
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MadeIT InPost Pro 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/madeit-inpost-pro\n"
+"Last-Translator: WCO Labs <sklep@wco-labs.pl>\n"
+"Language-Team: Polish\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-19T11:40:06+00:00\n"
+"PO-Revision-Date: 2026-10-19 12:00+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: madeit-inpost-pro\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#. Plugin Name of the plugin
+#: madeit-inpost-pro.php
+msgid "MadeIT InPost Pro"
+msgstr "MadeIT InPost Pro"
+
+#. Plugin URI of the plugin
+#: madeit-inpost-pro.php
+msgid "https://labs.made-it.pl/en/plugins/madeit-inpost-pro"
+msgstr ""
+
+#. Description of the plugin
+#: madeit-inpost-pro.php
+msgid "Adds InPost ShipX shipments, PDF labels and cash on delivery to MadeIT InPost, plus editable texts and an accent colour."
+msgstr "Dodaje do MadeIT InPost przesyłki ShipX, etykiety PDF i pobranie, a także edycję tekstów i kolor akcentu."
+
+#. Author of the plugin
+#: madeit-inpost-pro.php
+msgid "WCO Labs"
+msgstr ""
+
+#. Author URI of the plugin
+#: madeit-inpost-pro.php
+msgid "https://labs.made-it.pl/en"
+msgstr ""
+
+#: madeit-inpost-pro.php:39
+msgid "MadeIT InPost Pro needs the free MadeIT InPost plugin to be installed and active."
+msgstr "MadeIT InPost Pro wymaga zainstalowanej i aktywnej darmowej wtyczki MadeIT InPost."
+
+#. translators: %s: minimum version of the free plugin
+#: madeit-inpost-pro.php:48
+#, php-format
+msgid "MadeIT InPost Pro needs MadeIT InPost %s or newer. Please update the free plugin."
+msgstr "MadeIT InPost Pro wymaga MadeIT InPost w wersji %s lub nowszej. Zaktualizuj darmową wtyczkę."
+
+#: src/Features.php:71
+msgid "Shipments"
+msgstr "Przesyłki"
+
+#: src/Features.php:72
+msgid "Appearance"
+msgstr "Wygląd"
+
+#: src/Features.php:73
+msgid "Texts"
+msgstr "Teksty"
+
+#: src/Features.php:90
+#: src/Updater.php:193
+#: src/Updater.php:219
+msgid "License"
+msgstr "Licencja"
+
+#: src/Features.php:114
+msgid "Shipments and labels"
+msgstr "Przesyłki i etykiety"
+
+#: src/Features.php:114
+msgid "The ShipX data is in the InPost Parcel Manager, on the API tab. The map token and the ShipX token are two different keys."
+msgstr "Dane ShipX znajdziesz w Managerze Paczek InPost, w zakładce API. Token mapy i token ShipX to dwa różne klucze."
+
+#: src/Features.php:116
+msgid "ShipX organization ID"
+msgstr "Identyfikator organizacji ShipX"
+
+#: src/Features.php:117
+msgid "ShipX API token"
+msgstr "Token API ShipX"
+
+#: src/Features.php:117
+msgid "Needed to create shipments and download labels. The token gives access to your InPost account, so do not share it with anyone."
+msgstr "Potrzebny do tworzenia przesyłek i pobierania etykiet. Token daje dostęp do Twojego konta InPost, więc nie udostępniaj go nikomu."
+
+#: src/Features.php:118
+msgid "Default parcel size"
+msgstr "Domyślny gabaryt"
+
+#: src/Features.php:122
+msgid "You can change it for every order before the shipment is created."
+msgstr "Możesz go zmienić dla każdego zamówienia przed utworzeniem przesyłki."
+
+#: src/Features.php:123
+msgid "Sending method"
+msgstr "Sposób nadania"
+
+#: src/Features.php:124
+msgid "Courier pickup"
+msgstr "Odbiór przez kuriera"
+
+#: src/Features.php:124
+msgid "Drop-off in a parcel locker"
+msgstr "Nadanie w paczkomacie"
+
+#. translators: %s: environment name, Sandbox or Production
+#: src/Features.php:129
+#, php-format
+msgid "Environment: %s. Switch it with the test mode option on the Map tab."
+msgstr "Środowisko: %s. Przełączysz je opcją trybu testowego w zakładce Mapa."
+
+#. translators: %s: environment name, Sandbox or Production
+#: src/Features.php:129
+msgid "Sandbox"
+msgstr "Sandbox"
+
+#. translators: %s: environment name, Sandbox or Production
+#: src/Features.php:129
+msgid "Production"
+msgstr "Produkcja"
+
+#: src/Features.php:130
+msgid "Save shipments"
+msgstr "Zapisz przesyłki"
+
+#: src/Features.php:136
+msgid "Picker appearance"
+msgstr "Wygląd wyboru paczkomatu"
+
+#: src/Features.php:136
+msgid "The colour of the button and the frame. The background follows your theme."
+msgstr "Kolor przycisku i ramki. Tło dopasowuje się do motywu sklepu."
+
+#: src/Features.php:139
+msgid "Accent colour"
+msgstr "Kolor akcentu"
+
+#: src/Features.php:140
+msgid "Save appearance"
+msgstr "Zapisz wygląd"
+
+#: src/Features.php:148
+msgid "Hint above the button"
+msgstr "Podpowiedź nad przyciskiem"
+
+#: src/Features.php:148
+msgid "A short explanation of what the customer should do."
+msgstr "Krótkie wyjaśnienie, co klient ma zrobić."
+
+#: src/Features.php:149
+msgid "Button before choosing"
+msgstr "Przycisk przed wyborem"
+
+#: src/Features.php:149
+msgid "The text on the button that opens the map."
+msgstr "Tekst na przycisku otwierającym mapę."
+
+#: src/Features.php:150
+msgid "Button after choosing"
+msgstr "Przycisk po wyborze"
+
+#: src/Features.php:150
+msgid "The text on the button when a point is already chosen."
+msgstr "Tekst na przycisku, gdy punkt jest już wybrany."
+
+#: src/Features.php:151
+msgid "Message about the chosen point"
+msgstr "Komunikat o wybranym punkcie"
+
+#: src/Features.php:151
+msgid "Placeholders: {point} (point code), {address} (address)."
+msgstr "Znaczniki: {point} (kod punktu), {address} (adres)."
+
+#: src/Features.php:152
+msgid "Error when nothing is chosen"
+msgstr "Błąd braku wyboru"
+
+#: src/Features.php:152
+msgid "Shown when the customer tries to order without a parcel locker."
+msgstr "Pokazywany, gdy klient próbuje złożyć zamówienie bez paczkomatu."
+
+#: src/Features.php:154
+msgid "Texts shown to customers"
+msgstr "Teksty widoczne dla klientów"
+
+#: src/Features.php:154
+msgid "Available placeholders: {point}, {address}."
+msgstr "Dostępne znaczniki: {point}, {address}."
+
+#: src/Features.php:160
+msgid "Save texts"
+msgstr "Zapisz treści"
+
+#: src/Features.php:167
+#: src/Orders.php:102
+#: src/Updater.php:199
+#: src/Updater.php:253
+msgid "You do not have permission to do this."
+msgstr "Brak uprawnień."
+
+#: src/Orders.php:52
+msgid "Status:"
+msgstr "Status:"
+
+#: src/Orders.php:52
+msgid "created"
+msgstr "utworzona"
+
+#: src/Orders.php:53
+msgid "Tracking number:"
+msgstr "Numer przesyłki:"
+
+#: src/Orders.php:53
+msgid "not assigned yet (refresh in a moment)"
+msgstr "jeszcze nie nadano (odśwież za chwilę)"
+
+#: src/Orders.php:54
+msgid "Download label (PDF)"
+msgstr "Pobierz etykietę (PDF)"
+
+#: src/Orders.php:55
+msgid "Refresh status"
+msgstr "Odśwież status"
+
+#: src/Orders.php:61
+msgid "Point code"
+msgstr "Kod punktu"
+
+#: src/Orders.php:61
+msgid "E.g. WAW01M"
+msgstr "Np. WAW01M"
+
+#: src/Orders.php:62
+msgid "Parcel size"
+msgstr "Gabaryt"
+
+#: src/Orders.php:67
+msgid "Create shipment"
+msgstr "Utwórz przesyłkę"
+
+#: src/Orders.php:69
+msgid "First fill in the ShipX connection in the MadeIT InPost settings."
+msgstr "Najpierw uzupełnij połączenie z ShipX w ustawieniach MadeIT InPost."
+
+#: src/Orders.php:79
+msgid "A: small (8 × 38 × 64 cm)"
+msgstr "A: mała (8 × 38 × 64 cm)"
+
+#: src/Orders.php:80
+msgid "B: medium (19 × 38 × 64 cm)"
+msgstr "B: średnia (19 × 38 × 64 cm)"
+
+#: src/Orders.php:81
+msgid "C: large (41 × 38 × 64 cm)"
+msgstr "C: duża (41 × 38 × 64 cm)"
+
+#: src/Orders.php:108
+msgid "Order not found."
+msgstr "Nie znaleziono zamówienia."
+
+#: src/Orders.php:120
+msgid "Enter a valid InPost point code, for example WAW01M."
+msgstr "Podaj poprawny kod punktu InPost, np. WAW01M."
+
+#: src/Orders.php:126
+msgid "ShipX requires a Polish mobile number (9 digits). Correct the phone number in the order."
+msgstr "ShipX wymaga polskiego numeru komórkowego (9 cyfr). Popraw telefon w zamówieniu."
+
+#. translators: %s: order number
+#: src/Orders.php:136
+#, php-format
+msgid "Order %s"
+msgstr "Zamówienie %s"
+
+#. translators: 1: point code, 2: parcel size
+#: src/Orders.php:151
+#, php-format
+msgid "InPost: shipment created for point %1$s (size %2$s)."
+msgstr "InPost: utworzono przesyłkę do punktu %1$s (gabaryt %2$s)."
+
+#: src/Orders.php:163
+msgid "This order has no InPost shipment."
+msgstr "To zamówienie nie ma przesyłki InPost."
+
+#. translators: %s: tracking number
+#: src/Orders.php:170
+#, php-format
+msgid "InPost: tracking number %s."
+msgstr "InPost: numer przesyłki %s."
+
+#. translators: %s: error message
+#: src/Orders.php:221
+#, php-format
+msgid "InPost: %s"
+msgstr "InPost: %s"
+
+#. translators: %s: error message
+#: src/Orders.php:221
+msgid "the operation failed."
+msgstr "operacja nie powiodła się."
+
+#: src/Orders.php:223
+msgid "The InPost shipment was created."
+msgstr "Przesyłka InPost została utworzona."
+
+#: src/Orders.php:223
+msgid "The shipment status was refreshed."
+msgstr "Status przesyłki odświeżony."
+
+#: src/ShipX.php:53
+msgid "ShipX did not return the label (it is still being generated or the shipment is not paid). Try again in a moment."
+msgstr "ShipX nie zwrócił etykiety (jeszcze się generuje albo przesyłka jest nieopłacona). Spróbuj za chwilę."
+
+#. translators: %s: error message
+#: src/ShipX.php:81
+#, php-format
+msgid "Cannot connect to ShipX: %s"
+msgstr "Nie można połączyć się z ShipX: %s"
+
+#: src/ShipX.php:90
+msgid "ShipX rejected the token or the organization ID. Check them on the Shipments tab."
+msgstr "ShipX odrzucił token lub identyfikator organizacji. Sprawdź je w zakładce Przesyłki."
+
+#. translators: %s: error description from ShipX
+#: src/ShipX.php:94
+#, php-format
+msgid "ShipX: %s"
+msgstr "ShipX: %s"
+
+#. translators: %d: HTTP status code
+#: src/ShipX.php:116
+#, php-format
+msgid "error %d"
+msgstr "błąd %d"
+
+#. translators: %s: error message
+#: src/Updater.php:44
+#, php-format
+msgid "Could not connect to WCO Labs (%s)."
+msgstr "Brak połączenia z WCO Labs (%s)."
+
+#: src/Updater.php:66
+msgid "No such license key was found."
+msgstr "Nie znaleziono takiego klucza licencji."
+
+#: src/Updater.php:67
+msgid "Too many attempts. Try again in a minute."
+msgstr "Zbyt wiele prób. Spróbuj ponownie za minutę."
+
+#: src/Updater.php:69
+msgid "This license is not allowed to do that."
+msgstr "Licencja nie ma uprawnień do tej operacji."
+
+#: src/Updater.php:70
+msgid "The server rejected the data (site address or key)."
+msgstr "Serwer odrzucił dane (adres sklepu lub klucz)."
+
+#. translators: %d: HTTP status code
+#: src/Updater.php:71
+#, php-format
+msgid "The WCO Labs server returned error %d."
+msgstr "Serwer WCO Labs zwrócił błąd %d."
+
+#: src/Updater.php:127
+msgid "The update could not be downloaded. Check your license and the connection to WCO Labs."
+msgstr "Nie można pobrać aktualizacji. Sprawdź licencję i połączenie z WCO Labs."
+
+#: src/Updater.php:157
+msgid "The server does not know this license key."
+msgstr "Serwer nie zna takiego klucza licencji."
+
+#: src/Updater.php:158
+msgid "Could not check the license status."
+msgstr "Nie udało się sprawdzić statusu licencji."
+
+#: src/Updater.php:177
+msgid "No key"
+msgstr "Brak klucza"
+
+#: src/Updater.php:177
+msgid "Paste your license key to activate this shop and receive updates."
+msgstr "Wklej klucz licencji, aby aktywować sklep i otrzymywać aktualizacje."
+
+#: src/Updater.php:177
+msgid "Unavailable without a license"
+msgstr "Niedostępne bez licencji"
+
+#: src/Updater.php:178
+msgid "Key saved"
+msgstr "Klucz zapisany"
+
+#: src/Updater.php:178
+msgid "The connection to WCO Labs is not configured yet."
+msgstr "Połączenie z WCO Labs nie jest jeszcze skonfigurowane."
+
+#: src/Updater.php:178
+msgid "Waiting for configuration"
+msgstr "Oczekują na konfigurację"
+
+#: src/Updater.php:179
+msgid "Could not check the license"
+msgstr "Nie można sprawdzić licencji"
+
+#: src/Updater.php:179
+msgid "Could not connect to WCO Labs."
+msgstr "Brak połączenia z WCO Labs."
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:179
+#: src/Updater.php:187
+msgid "Could not be determined"
+msgstr "Nie udało się ustalić"
+
+#: src/Updater.php:180
+msgid "Unknown key"
+msgstr "Nieznany klucz"
+
+#: src/Updater.php:180
+msgid "The server does not know this license key. Check that you pasted all of it."
+msgstr "Serwer nie zna takiego klucza licencji. Sprawdź, czy został wklejony w całości."
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:180
+#: src/Updater.php:183
+msgid "Unavailable"
+msgstr "Niedostępne"
+
+#. translators: %s: date
+#: src/Updater.php:182
+#, php-format
+msgid "License expired on %s"
+msgstr "Licencja wygasła %s"
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:182
+#, php-format
+msgid "The add-on keeps working, but new versions are no longer available. %s."
+msgstr "Dodatek działa dalej, ale nowe wersje nie są już dostępne. %s."
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:182
+msgid "Renew your license in the customer account"
+msgstr "Odnów licencję w koncie klienta"
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:182
+msgid "Paused until renewal"
+msgstr "Wstrzymane do odnowienia"
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:183
+msgid "License blocked"
+msgstr "Licencja zablokowana"
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:183
+msgid "This license has been blocked. Contact WCO Labs support."
+msgstr "Ta licencja została zablokowana. Skontaktuj się ze wsparciem WCO Labs."
+
+#: src/Updater.php:185
+msgid "License active"
+msgstr "Licencja aktywna"
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:185
+#, php-format
+msgid "Valid until %1$s. Active sites: %2$d of %3$d."
+msgstr "Ważna do %1$s. Aktywne strony: %2$d z %3$d."
+
+#. translators: %s: date
+#: src/Updater.php:185
+#, php-format
+msgid "Available until %s"
+msgstr "Dostępne do %s"
+
+#. translators: %s: date
+#: src/Updater.php:186
+msgid "Shop not activated"
+msgstr "Sklep nie jest aktywowany"
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:186
+#, php-format
+msgid "The license is valid until %1$s, but this shop is not assigned to it (sites: %2$d of %3$d). Click “Save and activate”."
+msgstr "Licencja jest ważna do %1$s, ale ten sklep nie jest do niej przypisany (strony: %2$d z %3$d). Kliknij „Zapisz i aktywuj”."
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:186
+msgid "Available after activation"
+msgstr "Dostępne po aktywacji"
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:187
+msgid "Unknown license state"
+msgstr "Nieznany stan licencji"
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:187
+msgid "The server response was not recognised."
+msgstr "Nie rozpoznano odpowiedzi serwera."
+
+#: src/Updater.php:193
+msgid "MadeIT InPost Pro license"
+msgstr "Licencja MadeIT InPost Pro"
+
+#: src/Updater.php:206
+msgid "The license was activated for this shop."
+msgstr "Licencja została aktywowana dla tego sklepu."
+
+#: src/Updater.php:207
+msgid "The license could not be activated. Check the key and the connection to WCO Labs."
+msgstr "Nie udało się aktywować licencji. Sprawdź klucz i połączenie z WCO Labs."
+
+#: src/Updater.php:208
+msgid "The key was saved. Activation will be available once the public WCO Labs address is connected."
+msgstr "Klucz został zapisany. Aktywacja będzie dostępna po podłączeniu publicznego adresu WCO Labs."
+
+#: src/Updater.php:209
+msgid "The license key was removed."
+msgstr "Klucz licencji został usunięty."
+
+#: src/Updater.php:218
+msgid "MADEIT INPOST PRO / ACCESS"
+msgstr "MADEIT INPOST PRO / DOSTĘP"
+
+#: src/Updater.php:220
+msgid "Manage the license key and updates of the add-on for this shop."
+msgstr "Zarządzaj kluczem licencji i aktualizacjami dodatku dla tego sklepu."
+
+#: src/Updater.php:222
+msgid "Back to settings"
+msgstr "Wróć do ustawień"
+
+#: src/Updater.php:229
+msgid "LICENSE KEY"
+msgstr "KLUCZ LICENCJI"
+
+#: src/Updater.php:230
+msgid "Connect this shop to WCO Labs"
+msgstr "Połącz sklep z WCO Labs"
+
+#: src/Updater.php:231
+msgid "You will find the key in your customer account after purchase. One license covers one shop."
+msgstr "Klucz znajdziesz na koncie klienta po zakupie. Jedna licencja obejmuje jeden sklep."
+
+#: src/Updater.php:235
+msgid "License key"
+msgstr "Klucz licencji"
+
+#: src/Updater.php:235
+msgid "Paste your license key"
+msgstr "Wklej klucz licencji"
+
+#: src/Updater.php:236
+msgid "Save and activate"
+msgstr "Zapisz i aktywuj"
+
+#: src/Updater.php:236
+msgid "Save key"
+msgstr "Zapisz klucz"
+
+#: src/Updater.php:240
+msgid "STATUS"
+msgstr "STATUS"
+
+#: src/Updater.php:242
+msgid "Shop address"
+msgstr "Adres sklepu"
+
+#: src/Updater.php:243
+msgid "Updates"
+msgstr "Aktualizacje"
+
+#. translators: %d: number of characters entered
+#: src/Updater.php:263
+#, php-format
+msgid "This does not look like a license key. A key has 32 letters and digits, the value you entered has %d."
+msgstr "To nie wygląda na klucz licencji. Klucz ma 32 znaki (litery i cyfry), a podana wartość ma %d."

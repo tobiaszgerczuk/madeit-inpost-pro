@@ -1,0 +1,582 @@
+# Copyright (C) 2026 WCO Labs
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MadeIT InPost Pro 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/madeit-inpost-pro\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-19T11:40:06+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: madeit-inpost-pro\n"
+
+#. Plugin Name of the plugin
+#: madeit-inpost-pro.php
+msgid "MadeIT InPost Pro"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: madeit-inpost-pro.php
+msgid "https://labs.made-it.pl/en/plugins/madeit-inpost-pro"
+msgstr ""
+
+#. Description of the plugin
+#: madeit-inpost-pro.php
+msgid "Adds InPost ShipX shipments, PDF labels and cash on delivery to MadeIT InPost, plus editable texts and an accent colour."
+msgstr ""
+
+#. Author of the plugin
+#: madeit-inpost-pro.php
+msgid "WCO Labs"
+msgstr ""
+
+#. Author URI of the plugin
+#: madeit-inpost-pro.php
+msgid "https://labs.made-it.pl/en"
+msgstr ""
+
+#: madeit-inpost-pro.php:39
+msgid "MadeIT InPost Pro needs the free MadeIT InPost plugin to be installed and active."
+msgstr ""
+
+#. translators: %s: minimum version of the free plugin
+#: madeit-inpost-pro.php:48
+#, php-format
+msgid "MadeIT InPost Pro needs MadeIT InPost %s or newer. Please update the free plugin."
+msgstr ""
+
+#: src/Features.php:71
+msgid "Shipments"
+msgstr ""
+
+#: src/Features.php:72
+msgid "Appearance"
+msgstr ""
+
+#: src/Features.php:73
+msgid "Texts"
+msgstr ""
+
+#: src/Features.php:90
+#: src/Updater.php:193
+#: src/Updater.php:219
+msgid "License"
+msgstr ""
+
+#: src/Features.php:114
+msgid "Shipments and labels"
+msgstr ""
+
+#: src/Features.php:114
+msgid "The ShipX data is in the InPost Parcel Manager, on the API tab. The map token and the ShipX token are two different keys."
+msgstr ""
+
+#: src/Features.php:116
+msgid "ShipX organization ID"
+msgstr ""
+
+#: src/Features.php:117
+msgid "ShipX API token"
+msgstr ""
+
+#: src/Features.php:117
+msgid "Needed to create shipments and download labels. The token gives access to your InPost account, so do not share it with anyone."
+msgstr ""
+
+#: src/Features.php:118
+msgid "Default parcel size"
+msgstr ""
+
+#: src/Features.php:122
+msgid "You can change it for every order before the shipment is created."
+msgstr ""
+
+#: src/Features.php:123
+msgid "Sending method"
+msgstr ""
+
+#: src/Features.php:124
+msgid "Courier pickup"
+msgstr ""
+
+#: src/Features.php:124
+msgid "Drop-off in a parcel locker"
+msgstr ""
+
+#. translators: %s: environment name, Sandbox or Production
+#: src/Features.php:129
+#, php-format
+msgid "Environment: %s. Switch it with the test mode option on the Map tab."
+msgstr ""
+
+#. translators: %s: environment name, Sandbox or Production
+#: src/Features.php:129
+msgid "Sandbox"
+msgstr ""
+
+#. translators: %s: environment name, Sandbox or Production
+#: src/Features.php:129
+msgid "Production"
+msgstr ""
+
+#: src/Features.php:130
+msgid "Save shipments"
+msgstr ""
+
+#: src/Features.php:136
+msgid "Picker appearance"
+msgstr ""
+
+#: src/Features.php:136
+msgid "The colour of the button and the frame. The background follows your theme."
+msgstr ""
+
+#: src/Features.php:139
+msgid "Accent colour"
+msgstr ""
+
+#: src/Features.php:140
+msgid "Save appearance"
+msgstr ""
+
+#: src/Features.php:148
+msgid "Hint above the button"
+msgstr ""
+
+#: src/Features.php:148
+msgid "A short explanation of what the customer should do."
+msgstr ""
+
+#: src/Features.php:149
+msgid "Button before choosing"
+msgstr ""
+
+#: src/Features.php:149
+msgid "The text on the button that opens the map."
+msgstr ""
+
+#: src/Features.php:150
+msgid "Button after choosing"
+msgstr ""
+
+#: src/Features.php:150
+msgid "The text on the button when a point is already chosen."
+msgstr ""
+
+#: src/Features.php:151
+msgid "Message about the chosen point"
+msgstr ""
+
+#: src/Features.php:151
+msgid "Placeholders: {point} (point code), {address} (address)."
+msgstr ""
+
+#: src/Features.php:152
+msgid "Error when nothing is chosen"
+msgstr ""
+
+#: src/Features.php:152
+msgid "Shown when the customer tries to order without a parcel locker."
+msgstr ""
+
+#: src/Features.php:154
+msgid "Texts shown to customers"
+msgstr ""
+
+#: src/Features.php:154
+msgid "Available placeholders: {point}, {address}."
+msgstr ""
+
+#: src/Features.php:160
+msgid "Save texts"
+msgstr ""
+
+#: src/Features.php:167
+#: src/Orders.php:102
+#: src/Updater.php:199
+#: src/Updater.php:253
+msgid "You do not have permission to do this."
+msgstr ""
+
+#: src/Orders.php:52
+msgid "Status:"
+msgstr ""
+
+#: src/Orders.php:52
+msgid "created"
+msgstr ""
+
+#: src/Orders.php:53
+msgid "Tracking number:"
+msgstr ""
+
+#: src/Orders.php:53
+msgid "not assigned yet (refresh in a moment)"
+msgstr ""
+
+#: src/Orders.php:54
+msgid "Download label (PDF)"
+msgstr ""
+
+#: src/Orders.php:55
+msgid "Refresh status"
+msgstr ""
+
+#: src/Orders.php:61
+msgid "Point code"
+msgstr ""
+
+#: src/Orders.php:61
+msgid "E.g. WAW01M"
+msgstr ""
+
+#: src/Orders.php:62
+msgid "Parcel size"
+msgstr ""
+
+#: src/Orders.php:67
+msgid "Create shipment"
+msgstr ""
+
+#: src/Orders.php:69
+msgid "First fill in the ShipX connection in the MadeIT InPost settings."
+msgstr ""
+
+#: src/Orders.php:79
+msgid "A: small (8 × 38 × 64 cm)"
+msgstr ""
+
+#: src/Orders.php:80
+msgid "B: medium (19 × 38 × 64 cm)"
+msgstr ""
+
+#: src/Orders.php:81
+msgid "C: large (41 × 38 × 64 cm)"
+msgstr ""
+
+#: src/Orders.php:108
+msgid "Order not found."
+msgstr ""
+
+#: src/Orders.php:120
+msgid "Enter a valid InPost point code, for example WAW01M."
+msgstr ""
+
+#: src/Orders.php:126
+msgid "ShipX requires a Polish mobile number (9 digits). Correct the phone number in the order."
+msgstr ""
+
+#. translators: %s: order number
+#: src/Orders.php:136
+#, php-format
+msgid "Order %s"
+msgstr ""
+
+#. translators: 1: point code, 2: parcel size
+#: src/Orders.php:151
+#, php-format
+msgid "InPost: shipment created for point %1$s (size %2$s)."
+msgstr ""
+
+#: src/Orders.php:163
+msgid "This order has no InPost shipment."
+msgstr ""
+
+#. translators: %s: tracking number
+#: src/Orders.php:170
+#, php-format
+msgid "InPost: tracking number %s."
+msgstr ""
+
+#. translators: %s: error message
+#: src/Orders.php:221
+#, php-format
+msgid "InPost: %s"
+msgstr ""
+
+#. translators: %s: error message
+#: src/Orders.php:221
+msgid "the operation failed."
+msgstr ""
+
+#: src/Orders.php:223
+msgid "The InPost shipment was created."
+msgstr ""
+
+#: src/Orders.php:223
+msgid "The shipment status was refreshed."
+msgstr ""
+
+#: src/ShipX.php:53
+msgid "ShipX did not return the label (it is still being generated or the shipment is not paid). Try again in a moment."
+msgstr ""
+
+#. translators: %s: error message
+#: src/ShipX.php:81
+#, php-format
+msgid "Cannot connect to ShipX: %s"
+msgstr ""
+
+#: src/ShipX.php:90
+msgid "ShipX rejected the token or the organization ID. Check them on the Shipments tab."
+msgstr ""
+
+#. translators: %s: error description from ShipX
+#: src/ShipX.php:94
+#, php-format
+msgid "ShipX: %s"
+msgstr ""
+
+#. translators: %d: HTTP status code
+#: src/ShipX.php:116
+#, php-format
+msgid "error %d"
+msgstr ""
+
+#. translators: %s: error message
+#: src/Updater.php:44
+#, php-format
+msgid "Could not connect to WCO Labs (%s)."
+msgstr ""
+
+#: src/Updater.php:66
+msgid "No such license key was found."
+msgstr ""
+
+#: src/Updater.php:67
+msgid "Too many attempts. Try again in a minute."
+msgstr ""
+
+#: src/Updater.php:69
+msgid "This license is not allowed to do that."
+msgstr ""
+
+#: src/Updater.php:70
+msgid "The server rejected the data (site address or key)."
+msgstr ""
+
+#. translators: %d: HTTP status code
+#: src/Updater.php:71
+#, php-format
+msgid "The WCO Labs server returned error %d."
+msgstr ""
+
+#: src/Updater.php:127
+msgid "The update could not be downloaded. Check your license and the connection to WCO Labs."
+msgstr ""
+
+#: src/Updater.php:157
+msgid "The server does not know this license key."
+msgstr ""
+
+#: src/Updater.php:158
+msgid "Could not check the license status."
+msgstr ""
+
+#: src/Updater.php:177
+msgid "No key"
+msgstr ""
+
+#: src/Updater.php:177
+msgid "Paste your license key to activate this shop and receive updates."
+msgstr ""
+
+#: src/Updater.php:177
+msgid "Unavailable without a license"
+msgstr ""
+
+#: src/Updater.php:178
+msgid "Key saved"
+msgstr ""
+
+#: src/Updater.php:178
+msgid "The connection to WCO Labs is not configured yet."
+msgstr ""
+
+#: src/Updater.php:178
+msgid "Waiting for configuration"
+msgstr ""
+
+#: src/Updater.php:179
+msgid "Could not check the license"
+msgstr ""
+
+#: src/Updater.php:179
+msgid "Could not connect to WCO Labs."
+msgstr ""
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:179
+#: src/Updater.php:187
+msgid "Could not be determined"
+msgstr ""
+
+#: src/Updater.php:180
+msgid "Unknown key"
+msgstr ""
+
+#: src/Updater.php:180
+msgid "The server does not know this license key. Check that you pasted all of it."
+msgstr ""
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:180
+#: src/Updater.php:183
+msgid "Unavailable"
+msgstr ""
+
+#. translators: %s: date
+#: src/Updater.php:182
+#, php-format
+msgid "License expired on %s"
+msgstr ""
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:182
+#, php-format
+msgid "The add-on keeps working, but new versions are no longer available. %s."
+msgstr ""
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:182
+msgid "Renew your license in the customer account"
+msgstr ""
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:182
+msgid "Paused until renewal"
+msgstr ""
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:183
+msgid "License blocked"
+msgstr ""
+
+#. translators: %s: link to the customer account
+#: src/Updater.php:183
+msgid "This license has been blocked. Contact WCO Labs support."
+msgstr ""
+
+#: src/Updater.php:185
+msgid "License active"
+msgstr ""
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:185
+#, php-format
+msgid "Valid until %1$s. Active sites: %2$d of %3$d."
+msgstr ""
+
+#. translators: %s: date
+#: src/Updater.php:185
+#, php-format
+msgid "Available until %s"
+msgstr ""
+
+#. translators: %s: date
+#: src/Updater.php:186
+msgid "Shop not activated"
+msgstr ""
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:186
+#, php-format
+msgid "The license is valid until %1$s, but this shop is not assigned to it (sites: %2$d of %3$d). Click “Save and activate”."
+msgstr ""
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:186
+msgid "Available after activation"
+msgstr ""
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:187
+msgid "Unknown license state"
+msgstr ""
+
+#. translators: 1: date, 2: sites in use, 3: site limit
+#: src/Updater.php:187
+msgid "The server response was not recognised."
+msgstr ""
+
+#: src/Updater.php:193
+msgid "MadeIT InPost Pro license"
+msgstr ""
+
+#: src/Updater.php:206
+msgid "The license was activated for this shop."
+msgstr ""
+
+#: src/Updater.php:207
+msgid "The license could not be activated. Check the key and the connection to WCO Labs."
+msgstr ""
+
+#: src/Updater.php:208
+msgid "The key was saved. Activation will be available once the public WCO Labs address is connected."
+msgstr ""
+
+#: src/Updater.php:209
+msgid "The license key was removed."
+msgstr ""
+
+#: src/Updater.php:218
+msgid "MADEIT INPOST PRO / ACCESS"
+msgstr ""
+
+#: src/Updater.php:220
+msgid "Manage the license key and updates of the add-on for this shop."
+msgstr ""
+
+#: src/Updater.php:222
+msgid "Back to settings"
+msgstr ""
+
+#: src/Updater.php:229
+msgid "LICENSE KEY"
+msgstr ""
+
+#: src/Updater.php:230
+msgid "Connect this shop to WCO Labs"
+msgstr ""
+
+#: src/Updater.php:231
+msgid "You will find the key in your customer account after purchase. One license covers one shop."
+msgstr ""
+
+#: src/Updater.php:235
+msgid "License key"
+msgstr ""
+
+#: src/Updater.php:235
+msgid "Paste your license key"
+msgstr ""
+
+#: src/Updater.php:236
+msgid "Save and activate"
+msgstr ""
+
+#: src/Updater.php:236
+msgid "Save key"
+msgstr ""
+
+#: src/Updater.php:240
+msgid "STATUS"
+msgstr ""
+
+#: src/Updater.php:242
+msgid "Shop address"
+msgstr ""
+
+#: src/Updater.php:243
+msgid "Updates"
+msgstr ""
+
+#. translators: %d: number of characters entered
+#: src/Updater.php:263
+#, php-format
+msgid "This does not look like a license key. A key has 32 letters and digits, the value you entered has %d."
+msgstr ""
