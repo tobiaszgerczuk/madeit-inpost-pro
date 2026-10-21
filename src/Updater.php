@@ -36,6 +36,11 @@ final class Updater
         if ($key === '' || str_ends_with($this->apiUrl, '.invalid')) {
             return null;
         }
+        if (! $this->isSecureUrl($this->apiUrl)) {
+            $this->lastError = __('The MadeIT Labs address must use HTTPS.', 'madeit-inpost-pro');
+
+            return null;
+        }
         $response = wp_remote_post(rtrim($this->apiUrl, '/').'/api/v1/'.$path, [
             'timeout' => 8,
             'body' => ['license_key' => $key, 'site_url' => home_url('/')],
@@ -127,7 +132,36 @@ final class Updater
             return new \WP_Error('madeit_inpost_pro_update', __('The update could not be downloaded. Check your license and the connection to MadeIT Labs.', 'madeit-inpost-pro'));
         }
 
-        return download_url($data['download_url']);
+        $package = (string) $data['download_url'];
+        $expected = strtolower((string) ($data['sha256'] ?? ''));
+        if (! $this->isSecureUrl($package) || wp_parse_url($package, PHP_URL_HOST) !== wp_parse_url($this->apiUrl, PHP_URL_HOST) || ! preg_match('/^[a-f0-9]{64}$/', $expected)) {
+            return new \WP_Error('madeit_inpost_pro_update', __('The update package was rejected because it could not be verified.', 'madeit-inpost-pro'));
+        }
+        $file = download_url($package);
+        if (is_wp_error($file)) {
+            return $file;
+        }
+        if (! hash_equals($expected, strtolower((string) hash_file('sha256', $file)))) {
+            wp_delete_file($file);
+
+            return new \WP_Error('madeit_inpost_pro_update', __('The downloaded update package failed the integrity check and was not installed.', 'madeit-inpost-pro'));
+        }
+
+        return $file;
+    }
+
+    /**
+     * HTTPS is required, except for local development hosts.
+     */
+    private function isSecureUrl(string $url): bool
+    {
+        $parts = wp_parse_url($url);
+        $host = strtolower((string) ($parts['host'] ?? ''));
+        if (($parts['scheme'] ?? '') === 'https' && $host !== '') {
+            return true;
+        }
+
+        return ($parts['scheme'] ?? '') === 'http' && ($host === 'localhost' || $host === '127.0.0.1' || str_ends_with($host, '.localhost') || str_ends_with($host, '.test'));
     }
 
     /**

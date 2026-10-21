@@ -582,3 +582,15 @@ msgstr "Aktualizacje"
 #, php-format
 msgid "This does not look like a license key. A key has 32 letters and digits, the value you entered has %d."
 msgstr "To nie wygląda na klucz licencji. Klucz ma 32 znaki (litery i cyfry), a podana wartość ma %d."
+
+#: src/Updater.php
+msgid "The MadeIT Labs address must use HTTPS."
+msgstr "Adres MadeIT Labs musi używać HTTPS."
+
+#: src/Updater.php
+msgid "The update package was rejected because it could not be verified."
+msgstr "Pakiet aktualizacji został odrzucony, ponieważ nie udało się go zweryfikować."
+
+#: src/Updater.php
+msgid "The downloaded update package failed the integrity check and was not installed."
+msgstr "Pobrany pakiet aktualizacji nie przeszedł kontroli integralności i nie został zainstalowany."

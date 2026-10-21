@@ -580,3 +580,15 @@ msgstr ""
 #, php-format
 msgid "This does not look like a license key. A key has 32 letters and digits, the value you entered has %d."
 msgstr ""
+
+#: src/Updater.php
+msgid "The MadeIT Labs address must use HTTPS."
+msgstr ""
+
+#: src/Updater.php
+msgid "The update package was rejected because it could not be verified."
+msgstr ""
+
+#: src/Updater.php
+msgid "The downloaded update package failed the integrity check and was not installed."
+msgstr ""

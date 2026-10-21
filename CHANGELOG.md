@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2
+
+- Security: update packages are checked against the SHA-256 checksum published by MadeIT Labs and rejected when it does not match.
+- Security: the connection to MadeIT Labs and the update download must use HTTPS (local development hosts excepted), and the download must come from the MadeIT Labs host.
+
 ## 1.0.1
 
 - The publisher is now called MadeIT Labs (plugin header, texts and translations). No functional changes.
